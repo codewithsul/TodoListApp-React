@@ -1,0 +1,24 @@
+.gleem {
+    border-radius:40px;
+    width: 450px;
+    border: none;
+    outline: none;
+    background-color: #FF6720;
+    height: 60px;
+    color: #FFF;
+    margin-left: 17%;
+    margin-right: auto;
+    margin-top: 17px;
+}
+.gleem .wrap #name{
+    color: #FFF;
+    margin-top: 17px;
+    display: inline-block;
+    margin-left: 20px;
+    font-size: 16px;
+}
+.gleem .wrap #web{
+    color: #FFF;
+    margin-left: 100px;
+    font-size: 16px;
+}

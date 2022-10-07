@@ -1,0 +1,173 @@
+.leftblock {
+    width: 450px;
+    display: inline-block;
+    height: 500px;
+    border-radius: 33px;
+    border: 1px solid rgb(202, 202, 202);
+    background-color: #FFF;
+    margin-left: 17%;
+    margin-top: 40px;
+}
+.leftblock #input{
+    padding: 15px;
+    width: 280px;
+    margin-left: 10px;
+    margin-top: 20px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+}
+.leftblock #btn {
+    padding: 15px;
+    width: 100px;
+    border-radius: 15px;
+    color: #FFF;
+    background-color: #FF6720;
+    border:none;
+    outline: none;
+    margin-left: 8px;
+}
+.leftblock #btn:hover{
+    cursor: pointer;
+    opacity: 0.8;
+    transition: all 500ms ease;
+}
+.leftblock #btn:active{
+    opacity: 0.6;
+    transition: all 500ms ease;
+}
+.horizontal {
+    width: 449px;
+    margin-top: 20px;
+    border-style: inset;
+    color: rgb(236, 236, 236);
+    background-color:(236, 236, 236) ;
+}
+.leftblock .TodoList {
+    border: 1px solid rgb(202, 202, 202);
+    border-radius: 25px;
+    width: 380px;
+    padding: 15px;
+    background-color: #FFF;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    height: 300px;
+    box-sizing: border-box;
+    overflow-y: scroll;
+}
+.leftblock .TodoList .Todos {
+    border-radius: 10px;
+    width: 310px;
+    padding: 5px;
+    margin-bottom: 3px;
+    
+}
+.leftblock .TodoList .Todos h5{
+    display: inline-block;
+}
+.leftblock .TodoList .Todos .dlt {
+    padding: 8px;
+    width: 30px;
+    border-radius: 15px;
+    color: #FFF;
+    background-color: red;
+    border:none;
+    outline: none;
+    margin-left: 8px;
+}
+.leftblock .TodoList .Todos .dlt:hover{
+    cursor: pointer;
+    opacity: 0.8;
+    transition: all 500ms ease;
+}
+.leftblock .TodoList .Todos .dlt:active{
+    opacity: 0.6;
+    transition: all 500ms ease;
+}
+.leftblock .TodoList .Todos .cpt {
+    padding: 8px;
+    width: 30px;
+    border-radius: 15px;
+    color: #FFF;
+    background-color: lightgreen;
+    border:none;
+    outline: none;
+    margin-left: 8px;
+}
+.leftblock .TodoList .Todos .cpt:hover{
+    cursor: pointer;
+    opacity: 0.8;
+    transition: all 500ms ease;
+}
+
+.leftblock .TodoList .Todos .cpt:active{
+    opacity: 0.6;
+    transition: all 500ms ease;
+}
+.leftblock .TodoList .Todos .completed {
+    padding: 8px;
+    width: 100px;
+    border-radius: 15px;
+    color: #FFF;
+    background-color: lightseagreen;
+    border:none;
+    outline: none;
+    margin-left: 8px;
+}
+.leftblock .TodoList .Todos .completed:hover{
+    cursor: pointer;
+    opacity: 0.8;
+    transition: all 500ms ease;
+}
+.leftblock .TodoList .Todos .completed:active {
+    opacity: 0.6;
+    transition: all 500ms ease;
+}
+.rightblock {
+    float: right;
+    width: 400px;
+    border-radius: 33px;
+    border: 1px solid rgb(202, 202, 202);
+    background-color: #FFF;
+    margin-top: 40px;
+    margin-right: 18%;
+    height: 500px;
+}
+.rightblock .inner{
+    overflow-y: scroll;
+    height: 350px;
+}
+.rightblock .head{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.rightblock .head h5{
+    color: #141414;
+    font-size: 18px;
+    margin-left: 5px;
+}
+.rightblock .head .dot{
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background-color: greenyellow;
+    margin-left: 25px;
+}
+.horizontal2 {
+    width: 399px;
+    margin-top: 2.3px;
+    border-style: inset;
+    color: rgb(236, 236, 236);
+    background-color:(236, 236, 236) ;
+}
+.rightblock .done{
+    padding: 4px;
+    margin-bottom: 3px;
+    width: 270px;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 8px;
+    
+}
