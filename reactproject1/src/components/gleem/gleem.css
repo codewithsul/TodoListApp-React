@@ -22,3 +22,19 @@
     margin-left: 100px;
     font-size: 16px;
 }
+@media only screen and (max-width:480px ) {
+    .gleem {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 550px;
+    }
+    
+}
+@media only screen and (max-width:1024px ) {
+    .gleem {
+        margin-top: 550px;
+        transition: all 500ms ease;
+    }
+    
+}

@@ -155,6 +155,13 @@
     background-color: greenyellow;
     margin-left: 25px;
 }
+.rightblock .head .dott{
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background-color: paleturquoise;
+    margin-left: 25px;
+}
 .horizontal2 {
     width: 399px;
     margin-top: 2.3px;
@@ -171,3 +178,21 @@
     border-radius: 8px;
     
 }
+/*phone*/
+@media only screen and (max-width:480px ) {
+    .leftblock, .rightblock {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+        overflow-x: hidden;
+        transition: all 500ms ease;
+    }
+    .horizontal2 {
+        width: 428px;
+        transition: all 500ms ease;
+    }
+    
+}
+
+
+
