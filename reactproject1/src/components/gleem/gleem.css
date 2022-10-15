@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 .gleem {
     border-radius:40px;
     width: 450px;
@@ -16,11 +17,14 @@
     display: inline-block;
     margin-left: 20px;
     font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    
 }
 .gleem .wrap #web{
     color: #FFF;
-    margin-left: 100px;
+    margin-left: 35px;
     font-size: 16px;
+    font-family: 'Poppins', sans-serif;
 }
 @media only screen and (max-width:480px ) {
     .gleem {

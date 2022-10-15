@@ -6,7 +6,7 @@
     border: 1px solid rgb(202, 202, 202);
     background-color: #FFF;
     margin-left: 17%;
-    margin-top: 40px;
+    margin-top: 25px;
 }
 .leftblock #input{
     padding: 15px;
@@ -130,38 +130,22 @@
     border-radius: 33px;
     border: 1px solid rgb(202, 202, 202);
     background-color: #FFF;
-    margin-top: 40px;
+    margin-top: 25px;
     margin-right: 18%;
     height: 500px;
+}
+.rightblock h2{
+    margin: 0;
+    font-size: 17;
+    text-align: center;
+    padding: 0;
+    margin-top: 5px;
 }
 .rightblock .inner{
     overflow-y: scroll;
     height: 350px;
 }
-.rightblock .head{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-.rightblock .head h5{
-    color: #141414;
-    font-size: 18px;
-    margin-left: 5px;
-}
-.rightblock .head .dot{
-    height: 15px;
-    width: 15px;
-    border-radius: 50%;
-    background-color: greenyellow;
-    margin-left: 25px;
-}
-.rightblock .head .dott{
-    height: 15px;
-    width: 15px;
-    border-radius: 50%;
-    background-color: paleturquoise;
-    margin-left: 25px;
-}
+
 .horizontal2 {
     width: 399px;
     margin-top: 2.3px;

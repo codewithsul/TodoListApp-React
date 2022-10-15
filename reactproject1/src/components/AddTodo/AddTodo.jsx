@@ -10,6 +10,7 @@ const AddTodo = () => {
   const [AddToList, setList] = useState("");
   const [TodoList, setTodoList] = useState([]);
   const [completedList, setCompletedList] = useState([]);
+  const [Change, setChange] = useState("complete");
 
   const TodoNameRef = useRef();
 
@@ -46,8 +47,13 @@ const AddTodo = () => {
   const handleAdd = (id) => {
     const NewTodo = [...TodoList];
     const task = NewTodo.find((task) => task.id === id);
-    task.completed = !task.completed;
-    setCompletedList(NewTodo);
+    if (task.completed === false) {
+      task.completed = !task.completed;
+      setCompletedList(NewTodo);
+      localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(NewTodo));
+    } else {
+      task.completed = true;
+    }
   };
 
   useEffect(() => {
@@ -80,22 +86,26 @@ const AddTodo = () => {
                 </button>
                 <button
                   className="completed"
-                  onClick={() => handleAdd(task.id)}
+                  onClick={() => {
+                    {
+                      handleAdd(task.id);
+                    }
+                  }}
+                  style={{
+                    backgroundColor: task.completed
+                      ? "palegreen"
+                      : "lightseagreen",
+                  }}
                 >
-                  Complete
+                  {Change}
                 </button>
               </div>
-            )
+            );
           })}
         </div>
       </div>
       <div className="rightblock">
-        <div className="head">
-          <span className="dot"></span>
-          <h5>Completed</h5>
-          <span className="dott"></span>
-          <h5>Not completed</h5>
-        </div>
+        <h2>Tracker</h2>
         <hr className="horizontal2"></hr>
         <div className="inner">
           {completedList.map((task) => {
