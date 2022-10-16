@@ -10,6 +10,7 @@ const AddTodo = () => {
   const [AddToList, setList] = useState("");
   const [TodoList, setTodoList] = useState([]);
   const [completedList, setCompletedList] = useState([]);
+  const [Change, setChange] = useState("complete");
 
   const TodoNameRef = useRef();
 
@@ -27,6 +28,7 @@ const AddTodo = () => {
     };
     const NewList = [...TodoList, task];
     setTodoList(NewList);
+    localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(NewList));
     TodoNameRef.current.value = null;
   };
 
@@ -39,29 +41,25 @@ const AddTodo = () => {
       }
     });
     setTodoList(NewListDlt);
+    localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(NewListDlt));
   };
 
   const handleAdd = (id) => {
-    setTodoList(
-      TodoList.map((task) => {
-        if (task.id === id) {
-          return { ...task, completed: true };
-        } else {
-          return { ...task, completed: false };
-        }
-      })
-    );
-    setCompletedList(TodoList);
+    const NewTodo = [...TodoList];
+    const task = NewTodo.find((task) => task.id === id);
+    if (task.completed === false) {
+      task.completed = !task.completed;
+      setCompletedList(NewTodo);
+      localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(NewTodo));
+    } else {
+      task.completed = true;
+    }
   };
 
   useEffect(() => {
     const TodoData = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY));
     if (TodoData) setTodoList(TodoData);
   }, []);
-
-  useEffect(() => {
-    localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(TodoList));
-  }, [TodoList]);
 
   return (
     <>
@@ -88,9 +86,18 @@ const AddTodo = () => {
                 </button>
                 <button
                   className="completed"
-                  onClick={() => handleAdd(task.id)}
+                  onClick={() => {
+                    {
+                      handleAdd(task.id);
+                    }
+                  }}
+                  style={{
+                    backgroundColor: task.completed
+                      ? "palegreen"
+                      : "lightseagreen",
+                  }}
                 >
-                  Add to Completed
+                  {Change}
                 </button>
               </div>
             );
@@ -98,10 +105,7 @@ const AddTodo = () => {
         </div>
       </div>
       <div className="rightblock">
-        <div className="head">
-          <span className="dot"></span>
-          <h5>Completed</h5>
-        </div>
+        <h2>Tracker</h2>
         <hr className="horizontal2"></hr>
         <div className="inner">
           {completedList.map((task) => {
@@ -109,7 +113,9 @@ const AddTodo = () => {
               <div
                 className="done"
                 style={{
-                  backgroundColor: "palegreen",
+                  backgroundColor: task.completed
+                    ? "palegreen"
+                    : "paleturquoise",
                 }}
               >
                 <h5>{task.taskName}</h5>

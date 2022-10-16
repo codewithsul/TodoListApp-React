@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+.header {
+    border-radius:40px;
+    width: 450px;
+    border: none;
+    outline: none;
+    background-color: #FF6720;
+    height: 60px;
+    color: #FFF;
+    margin-left: 17%;
+    margin-right: auto;
+    padding: 0;
+    margin-bottom:10px;
+}
+.all{
+   display: block;
+   align-items: center;
+}
+h1 {
+    font-family: 'Poppins', sans-serif;
+    color: #FFF;
+    font-size: 40px;
+    text-align: center;
+}
+.all .header .head{
+   display: flex;
+   gap: 120px;
+   align-items: center;
+   height: 30px;
+   flex-direction: row;
+   margin-top: 10px;
+   text-align: center;
+}
+.head .c{
+    color: #141414;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    margin-left: 40px;
+    color: aquamarine;
+
+}
+.head .U{
+    color: #141414;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    color:aqua;
+
+}
+.head .dot{
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background-color: greenyellow;
+    margin-left: 45px;
+}
+.head .dott{
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background-color: paleturquoise;
+    margin-left: 25px;
+}
+@media only screen and (max-width:720px ) {
+    .header  {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .all {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    
+}
+@media only screen and (max-width:1024px ) {
+    .header  {
+        transition: all 500ms ease;
+    }
+    
+}

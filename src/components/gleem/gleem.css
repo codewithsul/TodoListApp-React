@@ -1,4 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 .gleem {
+    display: flex;
+    flex-direction: row;
     border-radius:40px;
     width: 450px;
     border: none;
@@ -9,32 +12,29 @@
     margin-left: 17%;
     margin-right: auto;
     margin-top: 17px;
+    padding: 0;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
 }
-.gleem .wrap #name{
-    color: #FFF;
-    margin-top: 17px;
-    display: inline-block;
-    margin-left: 20px;
-    font-size: 16px;
+#name, #web{
+    margin-top: 18px;
+    font-size: 14px;
 }
-.gleem .wrap #web{
-    color: #FFF;
-    margin-left: 100px;
-    font-size: 16px;
-}
-@media only screen and (max-width:480px ) {
+@media only screen and (max-width:720px ) {
     .gleem {
         width: 100%;
-        margin-left: 0;
-        margin-right: 0;
+        margin-left: auto;
+        margin-right: auto;
         margin-top: 550px;
+        gap: 15px;
+    }
+}
+@media only screen and (min-width:720px ) {
+    .gleem {
+        transition: all 500ms ease;
+        gap: 30px;
+        
     }
     
-}
-@media only screen and (max-width:1024px ) {
-    .gleem {
-        margin-top: 550px;
-        transition: all 500ms ease;
-    }
     
 }
