@@ -10,7 +10,7 @@ const AddTodo = () => {
   const [AddToList, setList] = useState("");
   const [TodoList, setTodoList] = useState([]);
   const [completedList, setCompletedList] = useState([]);
-  const [Change, setChange] = useState("complete");
+  const [Change, setChange] = useState("check");
 
   const TodoNameRef = useRef();
 
@@ -102,6 +102,14 @@ const AddTodo = () => {
               </div>
             );
           })}
+        </div>
+        <div className="note">
+          <div className="span">
+            <span className="green"></span>
+            <label id="done">completed</label>
+            <span className="blue"></span>
+            <label id="done">not completed</label>
+          </div>
         </div>
       </div>
       <div className="rightblock">

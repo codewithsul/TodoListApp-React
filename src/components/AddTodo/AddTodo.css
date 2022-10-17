@@ -7,6 +7,7 @@
     background-color: #FFF;
     margin-left: 17%;
     margin-top: 25px;
+    overflow-y: hidden;
 }
 .leftblock #input{
     padding: 15px;
@@ -75,6 +76,28 @@
     border:none;
     outline: none;
     margin-left: 8px;
+}
+.note .span {
+    margin-left: 50px;
+    margin-top: 20px;
+}
+.note .span .green {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: palegreen;
+    display: inline-block;
+}
+.note .span .blue {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin-left: 20px;
+    background-color: lightseagreen;
+    display: inline-block;
+}
+.note .span #done {
+    margin-left: 5px;
 }
 .leftblock .TodoList .Todos .dlt:hover{
     cursor: pointer;
